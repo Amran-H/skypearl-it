@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import BookingModal from '../Product/BookingModal/BookingModal';
 import ProductCard from './ProductCard';
 
 const Products = () => {
     const products = useLoaderData();
+    const [laptop, setLaptop] = useState(null);
     return (
         <div>
             This category has {products.length} laptops
@@ -13,10 +15,17 @@ const Products = () => {
                     products.map(product => <ProductCard
                         key={product._id}
                         product={product}
+                        setLaptop={setLaptop}
                     >
                     </ProductCard>)
                 }
             </div>
+            {
+                laptop &&
+                <BookingModal
+                    laptop={laptop}
+                ></BookingModal>
+            }
         </div>
     );
 };
