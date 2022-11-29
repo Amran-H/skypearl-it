@@ -1,4 +1,5 @@
 import React from 'react';
+import Category from '../../Category/Category/Category';
 import Banner from '../Banner/Banner';
 import ContactFrom from '../ContactFrom/ContactFrom';
 import FeedBack from '../FeedBack/FeedBack';
@@ -6,9 +7,9 @@ import FeedBack from '../FeedBack/FeedBack';
 const Home = () => {
     return (
         <div className=''>
-            Home
-            <Banner></Banner>
 
+            <Banner></Banner>
+            <Category></Category>
             <FeedBack></FeedBack>
             <ContactFrom></ContactFrom>
         </div>
