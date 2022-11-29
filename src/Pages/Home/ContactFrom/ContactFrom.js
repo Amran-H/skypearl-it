@@ -2,7 +2,7 @@ import React from 'react';
 
 const ContactFrom = () => {
     return (
-        <section className='text-center py-12 bg-base-200 rounded-lg'
+        <section className='text-center py-12 bg-slate-300 rounded-lg'
         >
 
             <p className='text-black font-semibold text-3xl pt-2 pb-10 '>Stay Connected With us</p>

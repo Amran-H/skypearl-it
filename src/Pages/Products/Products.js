@@ -7,7 +7,7 @@ const Products = () => {
     return (
         <div>
             This category has {products.length} laptops
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 
+            <div className='grid  gap-6 lg:grid-cols-3 md:grid-cols-2 
             sm:grid-cols-1 '>
                 {
                     products.map(product => <ProductCard

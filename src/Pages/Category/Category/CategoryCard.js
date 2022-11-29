@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const CategoryCard = ({ category }) => {
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
-            <figure><img src={category.img} alt="Shoes" /></figure>
+        <div className="card  bg-slate-300 shadow-xl">
+            <figure><img className='mt-4' src={category.img} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title font-bold">{category.name}</h2>
                 <p>{category.description}</p>
