@@ -6,7 +6,7 @@ import { AuthContext } from '../context/AuthProvider';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const { signIn } = useContext(AuthContext);
+    const { signIn, handleGoogleSignIn } = useContext(AuthContext);
     const [loginError, setLoginError] = useState('');
     // const [loginUserEmail, setLoginUserEmail] = useState('');
     // const [token] = useToken(loginUserEmail);
@@ -67,7 +67,7 @@ const Login = () => {
                 </form>
                 <p>New to SkyPearl-IT <Link className='text-primary' to="/signup">Create new Account</Link></p>
                 <div className="divider">OR</div>
-                <button className='btn btn-outline w-full'>CONTINUE WITH GOOGLE</button>
+                <button onClick={handleGoogleSignIn} className='btn btn-outline w-full'>CONTINUE WITH GOOGLE</button>
             </div>
         </div>
     );
