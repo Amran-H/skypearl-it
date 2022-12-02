@@ -13,6 +13,7 @@ import Category from "../../Pages/Category/Category/Category";
 import Home from "../../Pages/Home/Home/Home";
 import Product from "../../Pages/Product/Product/Product";
 import Products from "../../Pages/Products/Products";
+import NotFound from "../../Pages/Shared/NotFound";
 import AdminRoute from "../AdminRoute/AdminRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog></Blog>
+            },
+            {
+                path: '*',
+                element: <NotFound></NotFound>
             },
         ]
     },
