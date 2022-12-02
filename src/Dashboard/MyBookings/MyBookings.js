@@ -41,7 +41,13 @@ const MyBookings = () => {
                                 className='hover'
                                 key={order._id}>
                                 <th>{i + 1}</th>
-                                <td>{order?.img}</td>
+                                <td>{order?.img}
+                                    <div className="avatar">
+                                        <div className="w-16 rounded-xl">
+                                            <img src="https://placeimg.com/192/192/people" />
+                                        </div>
+                                    </div>
+                                </td>
                                 <td>{order?.buyer}</td>
                                 <td>{order?.price} tk</td>
                                 <td>Blue</td>

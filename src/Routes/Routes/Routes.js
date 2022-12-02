@@ -67,11 +67,11 @@ const router = createBrowserRouter([
             },
             {
                 path: '/dashboard/addproduct',
-                element: <AdminRoute><AddProduct></AddProduct></AdminRoute>
+                element: <AddProduct></AddProduct>
             },
             {
                 path: '/dashboard/myproducts',
-                element: <AdminRoute><MyProducts></MyProducts></AdminRoute>
+                element: <MyProducts></MyProducts>
             },
         ]
     }
