@@ -53,6 +53,9 @@ const AllUsers = () => {
                                     onClick={() => handleMakeAdmin(user?._id)}
                                     className='btn btn-xs btn-primary'>
                                     Make Admin</button>}</td>
+
+                                <label htmlFor="confirmation-modal" className="btn">open modal</label>
+
                                 <td><button className='btn btn-xs btn-warning'>Delete</button></td>
                             </tr>)
                         }
