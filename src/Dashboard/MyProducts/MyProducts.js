@@ -7,7 +7,7 @@ import MyProductsCard from './MyProductsCard';
 const MyProducts = () => {
     const { user } = useContext(AuthContext);
 
-    const url = `http://localhost:5000/myproducts?email=${user?.email}`
+    const url = `https://skypearl-it-server.vercel.app/myproducts?email=${user?.email}`
 
     const { data: myproducts = [] } = useQuery({
         queryKey: ['myproducts', user?.email],

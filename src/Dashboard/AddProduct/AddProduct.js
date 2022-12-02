@@ -15,7 +15,7 @@ const AddProduct = () => {
     const { data: categoryId, isLoading } = useQuery({
         queryKey: ['categoryId'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/categoriesId');
+            const res = await fetch('https://skypearl-it-server.vercel.app/categoriesId');
             const data = await res.json();
             return data;
         }
@@ -35,7 +35,7 @@ const AddProduct = () => {
             purchaseYear: data.purchaseYear,
         }
         console.log(product);
-        fetch('http://localhost:5000/products', {
+        fetch('https://skypearl-it-server.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
