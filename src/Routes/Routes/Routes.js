@@ -1,14 +1,17 @@
 import { createBrowserRouter } from "react-router-dom";
+import AllUsers from "../../Dashboard/AllUsers/AllUsers";
 import Dashboard from "../../Dashboard/Dashboard/Dashboard";
 import MyBookings from "../../Dashboard/MyBookings/MyBookings";
 import DashboardLayout from "../../Layout/DashboardLayout";
 import Main from "../../Layout/Main";
 import Login from "../../Login/Login";
 import SignUp from "../../Login/SignUp";
+import Blog from "../../Pages/Blog/Blog";
 import Category from "../../Pages/Category/Category/Category";
 import Home from "../../Pages/Home/Home/Home";
 import Product from "../../Pages/Product/Product/Product";
 import Products from "../../Pages/Products/Products";
+import AdminRoute from "../AdminRoute/AdminRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
@@ -42,6 +45,10 @@ const router = createBrowserRouter([
                 path: '/product/:id',
                 element: <Product></Product>
             },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
+            },
         ]
     },
     {
@@ -51,7 +58,11 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard',
                 element: <MyBookings></MyBookings>
-            }
+            },
+            {
+                path: '/dashboard/allusers',
+                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+            },
         ]
     }
 ])
